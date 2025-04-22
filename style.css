@@ -1,0 +1,78 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+  background: linear-gradient(to bottom right, #e0c3fc, #8ec5fc);
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  text-align: center;
+  position: relative;
+}
+
+h1 {
+  font-size: 3em;
+  color: #ffffff;
+  margin: 0.5em 0 0;
+  animation: pop 1s ease-out;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  color: #f0f0f0;
+}
+
+.redeem-button {
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.1em;
+  border-radius: 50px;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  transition: background 0.3s ease;
+}
+
+.redeem-button:hover {
+  background-color: #574fd6;
+}
+
+.gift-section {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  margin-top: 40px;
+}
+
+.balloon {
+  position: absolute;
+  bottom: -100px;
+  width: 60px;
+  height: 80px;
+  background: radial-gradient(circle at 30% 30%, #ccc, #999);
+  border-radius: 50% 50% 50% 50%;
+  animation: fly 12s linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes fly {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-120vh); opacity: 0; }
+}
+
+@keyframes pop {
+  0% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
